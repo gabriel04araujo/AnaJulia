@@ -1,61 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: lightblue;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-color: #F3E5AB;
+    box-sizing: border-box;
 }
-
 .box {
-    background-color: white;     
-    padding: 40px;                  
-    border-radius: 15px;            
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F0;
+    border-radius: 25px;
+    width: 800px;
 }
 
 h1 {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Great Vibes', cursive;
+    align-self: center;
 }
 
 p {
+    padding: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+}
+
+.mural {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pic {
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+}
+
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Raleway', sans-serif;;
-}
-.pic {
-    justify-content: space-between;
-    width: 20   0px;
-    height: 200px;
+    padding: 15px;
 }
 
-#btn {
-  background-color: #ff6b81;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#saudade {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    background-color: #F3E5AB;
+    color: #4a4125;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(243, 229, 171, 0.4);
+    transition: all 0.3s ease;
+    width: fit-content;
 }
 
-#btn:hover {
-  background-color: #ff4b6e;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+#saudade:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(243, 229, 171, 0.6);
 }
 
-#btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#saudade:active {
+    transform: translateY(0) scale(0.96);
+}
+
+@media (max-width: 600px) {
+
+    body {
+        align-items: flex-start;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin: 20px 15px 10px;
+    }
+
+    p {
+        padding: 10px 20px;
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .mural {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .pic {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .btn {
+        padding: 15px 20px 25px;
+    }
+
+    #saudade {
+        padding: 13px 24px;
+        font-size: 15px;
+    }
 }
